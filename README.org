@@ -1,0 +1,13 @@
+* anyglobal 
+
+** taking rye for a spin
+
+https://rye-up.com/
+
+** usage
+
+#+begin_example
+docker run --rm -ti python bash
+pip install git+https://github.com/taylormonacelli/anyglobal.git
+hello
+#+end_example

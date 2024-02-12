@@ -1,24 +1,52 @@
 import argparse
+import logging
+import sys
+
+
+def parse_args(args):
+    parser = argparse.ArgumentParser(description="Just a demonstration")
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        dest="loglevel",
+        help="set loglevel to INFO",
+        action="store_const",
+        const=logging.INFO,
+    )
+    parser.add_argument(
+        "-vv",
+        "--very-verbose",
+        dest="loglevel",
+        help="set loglevel to DEBUG",
+        action="store_const",
+        const=logging.DEBUG,
+    )
+    parser.add_argument(
+        "-p",
+        "--path",
+        dest="path",
+        help="path to input file",
+    )
+
+    return parser.parse_args(args)
 
 
 def hello():
     return "Hello from anyglobal!"
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Description of your program")
-    parser.add_argument("--path", help="Specify the path")
-    args = parser.parse_args()
+def main(args):
+    args = parse_args(args)
 
-    # Access the specified path using args.path
     if args.path:
-        print("Path specified:", args.path)
-    else:
-        print("No path specified.")
+        print(f"Path: {args.path}")
 
-    # Call hello function
     print(hello())
 
 
+def run():
+    main(sys.argv[1:])
+
+
 if __name__ == "__main__":
-    main()
+    run()
