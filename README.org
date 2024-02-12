@@ -1,7 +1,0 @@
-* anyglobal
-
-This is a description of my anyglobal.
-
-** Usage
-
-To use my project, run this command: ./anyglobal --verbose
