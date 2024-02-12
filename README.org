@@ -1,5 +1,17 @@
 * anyglobal 
 
+** motivation:
+
+I've been using pyscaffold
+https://pyscaffold.org/en/stable/usage.html
+
+forever and it works great, but creating a project leaves a whole lot
+of files in project.
+
+rye offers a slim--seeminly lightweight--project creation experience.
+
+...trying it out.
+
 ** taking rye for a spin
 
 https://rye-up.com/
